@@ -21,12 +21,10 @@ namespace ReallyBasicExampleProtector.Core.Helpers
                 {
                     ROTed -= maxChar;
                 }
-
                 else if (ROTed < Convert.ToInt32(char.MinValue))
                 {
                     ROTed += maxChar;
                 }
-
                 buffer[i] = Convert.ToChar(ROTed);
             }
 

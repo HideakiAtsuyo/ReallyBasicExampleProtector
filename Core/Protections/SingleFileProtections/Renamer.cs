@@ -52,12 +52,12 @@ namespace ReallyBasicExampleProtector.Core.Protections
                     }
 
                     foreach (var x in mod.Types.Where(x => x.IsGlobalModuleType))
+                    {
                         x.Name = oofed.Replace("     ", "ᅠ");//Shht who said that you need a simple thing ?
+                    }
                 }
-
             } else if(Settings.randomRenaming)
             {
-
                 string name = "/*ᅠHWᅠ*/";
                 int notBreak = Helpers.Others.rdm.Next(1, 999999), notBreak2 = Helpers.Others.rdm.Next(1, 999999);
                 if (Settings.b64Names)
@@ -94,7 +94,9 @@ namespace ReallyBasicExampleProtector.Core.Protections
                     }
 
                     foreach (var x in mod.Types.Where(x => x.IsGlobalModuleType))
+                    {
                         x.Name = oofed.Replace("     ", "ᅠ");//Shht who said that you need a simple thing ?
+                    }
                 }
 
             }

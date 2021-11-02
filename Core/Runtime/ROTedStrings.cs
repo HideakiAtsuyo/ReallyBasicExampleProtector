@@ -23,7 +23,6 @@ namespace ReallyBasicExampleProtector.Core.Runtime
         }
         public static string ROTMeA(this string source, Int16 shift)
         {
-
             source = source.fromBase64String();
 
             var maxChar = char.MaxValue.toInt32();
@@ -43,9 +42,7 @@ namespace ReallyBasicExampleProtector.Core.Runtime
                 }
 
                 buffer[i] = ROTed.toChar();
-
             }
-
             return new string(buffer);
         }
 

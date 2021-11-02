@@ -31,7 +31,6 @@ namespace ReallyBasicExampleProtector
 
         private void ReallyBasicExampleProtector_DragDrop(object sender, DragEventArgs e)
         {
-            
             string[] HelloWorld = (string[])e.Data.GetData(DataFormats.FileDrop, false);
             if (Stuff.verifyIfAllowed(HelloWorld[0]))
                 FileToProtectHATB.Text = HelloWorld[0];
@@ -178,9 +177,6 @@ namespace ReallyBasicExampleProtector
             /*if (AntiTamperHACB.Checked)
                 Console.WriteLine("Not available");
             */
-
-
-
 
             try
             {

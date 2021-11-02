@@ -6,7 +6,7 @@ namespace ReallyBasicExampleProtector.Core.Runtime
     public static class AntiDump
     {
         [DllImport("kernel32.dll", EntryPoint = "VirtualProtect")]
-        private static extern unsafe bool VirtualProtect(IntPtr lpAddress, uint dwSize, uint flNewProtect, out uint lpflOldProtect);// :)
+        private static extern unsafe bool VirtualProtect(IntPtr lpAddress, uint dwSize, uint flNewProtect, out uint lpflOldProtect); // :)
         [DllImport("kernel32.dll", EntryPoint = "ZeroMemory")]
         private static extern IntPtr ZeroMemory(IntPtr addr, IntPtr size);
         private static unsafe void AntiDumpLmao()

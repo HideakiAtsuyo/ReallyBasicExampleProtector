@@ -8,10 +8,8 @@ namespace ReallyBasicExampleProtector.Core.Protections
 {
     public static class Mutations
     {
-
         public static void Execute(ModuleDefMD mod)
         {
-            
         }
     }
 }

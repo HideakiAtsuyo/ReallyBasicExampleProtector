@@ -22,7 +22,6 @@ namespace ReallyBasicExampleProtector.Core.Protections
                         var instr = method.Body.Instructions;
                         for (var i = 0; i < instr.Count; i++)
                         {
-                            
                             if (method.Body.Instructions[i].IsLdcI4())
                             {
                                 var meth1 = new MethodDefUser(RenamerHelper.RandomString(Others.rdm.Next(10, 20)), MethodSig.CreateStatic(mod.CorLibTypes.Int32), MethodImplAttributes.IL | MethodImplAttributes.Managed, MethodAttributes.Public | MethodAttributes.Static | MethodAttributes.HideBySig | MethodAttributes.ReuseSlot);
@@ -56,7 +55,6 @@ namespace ReallyBasicExampleProtector.Core.Protections
                 }
                 Logger.Info(String.Format("[MindLated] Proxied {0} int.", Output.Green(proxiedIntNumber.ToString())));
                 proxiedIntNumber = 0;
-
             } catch (Exception ex)
             {
                 Console.WriteLine(ex);

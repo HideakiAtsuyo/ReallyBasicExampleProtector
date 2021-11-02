@@ -65,7 +65,6 @@ namespace ReallyBasicExampleProtector.Core.Protections
 								}
 							}
 						}
-						
 					}
 				}
 				Logger.Info(String.Format("[?] Call to Calli {0}", Output.Green(callToCalli.ToString())));
