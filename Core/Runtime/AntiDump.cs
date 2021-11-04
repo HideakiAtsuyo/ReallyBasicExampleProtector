@@ -13,7 +13,6 @@ namespace ReallyBasicExampleProtector.Core.Runtime
         {
             byte* ptr = (byte*)(void*)Marshal.GetHINSTANCE(typeof(AntiDump).Module);
             byte* ptr2 = ptr + 60;
-            //bool flag = typeof(AntiDump).Module.FullyQualifiedName.Length > 0 && typeof(AntiDump).Module.FullyQualifiedName[0] == '<';
             IntPtr ptrLmao = (IntPtr)((void*)((byte*)(ptr + (uint)(*(int*)(ptr + 60))) + 24));
             uint prot = 0;
             VirtualProtect(ptrLmao, 1, 64U, out prot);
