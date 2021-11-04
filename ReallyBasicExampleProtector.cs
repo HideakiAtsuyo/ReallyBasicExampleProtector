@@ -67,23 +67,6 @@ namespace ReallyBasicExampleProtector
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK; //Dark Theme >>>>>>>>>>>>>> Light Theme..
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.Blue900, Primary.Blue500, Accent.LightBlue200, TextShade.BLACK); //Looks better like this for me :)
             /* Initialize MaterialSkinManager */
-            //VMandMutationsHALV.BackColor = Color.FromArgb(51, 51, 51);
-            /* List View Test */
-            /*//Define
-            string[][] data = new[]
-            {
-                new [] {"Ex Meth 1", "Ex Meth 1 Addr"},
-                new [] {"Ex Meth 2", "Ex Meth 2 Addr"}
-            };
-
-            //Add
-            foreach (string[] version in data)
-            {
-                ListViewItem item = new(version);
-                VMandMutationsHALV.Items.Add(item);
-            }*/
-            /* List View Test */
-
             this.DragDrop += ReallyBasicExampleProtector_DragDrop;
             this.DragEnter += ReallyBasicExampleProtector_DragEnter;
 #if !DEBUG
@@ -99,7 +82,6 @@ namespace ReallyBasicExampleProtector
                 HAOFD.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 HAOFD.RestoreDirectory = true;
                 HAOFD.Title = "Select The File To Protect";
-                //HAOFD.Filter = "EXE Files (*.exe)|*.exe|DLL Files (*.dll)|*.dll|All files (*.*)|*.*";
                 HAOFD.Filter = "EXE Files (*.exe)|*.exe|DLL Files (*.dll)|*.dll";
                 HAOFD.CheckPathExists = true;
                 HAOFD.CheckFileExists = true;
@@ -170,19 +152,9 @@ namespace ReallyBasicExampleProtector
 
                 Renamer.Execute(Module);
             }
-
-            /*if (PackerHACB.Checked)
-                Packer.Execute(Module);*/
-
-            /*if (AntiTamperHACB.Checked)
-                Console.WriteLine("Not available");
-            */
-
+            
             try
             {
-                ModuleWriterOptions opts = new ModuleWriterOptions(Module);
-                opts.MetadataOptions.Flags = MetadataFlags.KeepOldMaxStack;
-                //Module.Write(output, opts);
                 Module.Write(output);
                 Logger.Info(String.Format("File {0} protected with success !", Output.Green(Stuff.getFileName(fileName))));
             }
