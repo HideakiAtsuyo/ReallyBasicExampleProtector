@@ -15,7 +15,6 @@ namespace ReallyBasicExampleProtector
         {
             NativeStuff.ShowWindow(NativeStuff.consoleHandle, 0);
             Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(ReallyBasicExampleProtector);
         }
     }
